@@ -1,0 +1,32 @@
+{
+  "name": "ch-mysql-sink10",
+  "config": {
+    "connector.class": "com.clickhouse.kafka.connect.ClickHouseSinkConnector",
+    "tasks.max": "1",
+
+    "topics.regex": "datatopic\\.ecomm\\.(.*)",
+
+    "hostname": "clickhouse",
+    "port": "8123",
+    "database": "ecomm",
+    "username": "default",
+    "password": "mypassword",
+
+    "table.name.format": "datatopic.ecomm.${topic}",
+
+    "auto.create.tables": "true",
+    "auto.evolve": "true",
+    "auto.create": "true",
+    "delete.enabled":"true",
+    "insert.mode": "upsert",
+
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "http://schema-registry:8081",
+    "value.converter.schemas.enable": true,
+
+    "errors.tolerance": "all",
+    "errors.log.enable": "true",
+    "errors.log.include.messages": "true"
+  }
+}
