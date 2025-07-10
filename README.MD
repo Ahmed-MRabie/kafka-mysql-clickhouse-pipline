@@ -1,4 +1,4 @@
-# Real-Time Data Pipeline using MySQL, Apache Kafka, and ClickHouse
+# Real-Time Data Pipeline using MySQL, Kafka, and ClickHouse
 
 This project demonstrates a real-time data integration pipeline that captures changes from a MySQL database and streams them into ClickHouse using Kafka Connect.
 
@@ -15,16 +15,16 @@ This project demonstrates a real-time data integration pipeline that captures ch
 - **Docker**: Containerized environment for easy setup and reproducibility.
 
 ## 📁 Project Structure
-
-├── connectors/
-│ ├── mysql 
-| |     └── mysql-source-connector.json       # Kafka Connect config for MySQL
-│ └── clickhouse 
-|       └── clickhouse-sink-connector.json    # Kafka Connect config for ClickHouse
-├── plugins/                                  # Directory for custom Kafka Connect plugins
-├── sql-script/                               # Directory for MySQL DB script
-├── images/                                   # Pipline diagram and project images
-└── README.md                                 # Project documentation
+    ```bash
+    ├── connectors/
+    │ ├── mysql 
+    | |     └── mysql-source-connector.json       # Kafka Connect config for MySQL
+    │ └── clickhouse 
+    |       └── clickhouse-sink-connector.json    # Kafka Connect config for ClickHouse
+    ├── plugins/                                  # Directory for custom Kafka Connect plugins
+    ├── sql-script/                               # Directory for MySQL DB script
+    ├── images/                                   # Pipline diagram and project images
+    └── README.md                                 # Project documentation
 
 
 ## 🚀 How It Works
